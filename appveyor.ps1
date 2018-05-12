@@ -6,6 +6,7 @@ if ($env:FUNCTIONALTESTS -eq 'true') {
   #Install-Product node 8
   cd neovim
   ci\build.ps1
+  Write-Host $LastExitCode
 } else {
   echo "---> No Functionaltests"
   cargo build
